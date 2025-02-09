@@ -1,0 +1,109 @@
+/* Global Container */
+.educate-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f1f8e9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Section */
+  .educate-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .educate-header h1 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+  }
+  
+  .educate-header p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Steps Section */
+  .steps-section {
+    margin: 20px 0;
+  }
+  
+  .steps-section h2 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+  }
+  
+  .steps-section ol {
+    padding-left: 20px;
+    list-style: decimal;
+  }
+  
+  .steps-section li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Form Section */
+  .proof-form-section {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .proof-form-section h2 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+  }
+  
+  .proof-form-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .proof-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  #file-upload {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #66bb6a;
+    transform: scale(1.1);
+  }
+  
+  /* Thank You Message */
+  .thank-you-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .thank-you-message h2 {
+    color: #2e7d32;
+  }
+  
+  .thank-you-message p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  

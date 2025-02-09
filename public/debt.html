@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            font-size: medium;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 20px;
+            margin-top: 10px;
+        }
+        .progress {
+            height: 100%;
+            width: 0%;
+            background-color: #4CAF50;
+            text-align: center;
+            color: white;
+            line-height: 20px;
+        }
+        .suggestions {
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Debt Tracker</h2>
+        <label for="debt">Total Debt Amount ($):</label>
+        <input type="number" id="debt" placeholder="Enter total debt">
+
+        <label for="days">Time Period (days):</label>
+        <input type="number" id="days" placeholder="Enter days to clear">
+
+        <button onclick="calculateDebt()">Calculate</button>
+        
+        <h3 id="result"></h3>
+        
+        <label for="paid">Amount Paid ($):</label>
+        <input type="number" id="paid" placeholder="Enter amount paid" oninput="updateProgress()">
+        
+        <button  onclick="makePayment()">Make a Payment</button>
+        
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        
+        <div class="suggestions">
+            <h4>Suggestions to Clear Debt:</h4>
+            <ul>
+                <li>Track your expenses and cut unnecessary spending.</li>
+                <li>Increase your income through side hustles.</li>
+                <li>Make extra payments whenever possible.</li>
+                <li>Consolidate debt if interest rates are high.</li>
+                <li>Stick to a budget and prioritize debt repayment.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let totalDebt = 0;
+
+        function calculateDebt() {
+            totalDebt = parseFloat(document.getElementById("debt").value);
+            let days = parseInt(document.getElementById("days").value);
+            
+            if (isNaN(totalDebt) || isNaN(days) || totalDebt <= 0 || days <= 0) {
+                alert("Please enter valid values.");
+                return;
+            }
+            
+            let dailyPayment = (totalDebt / days).toFixed(2);
+            document.getElementById("result").innerText = `You need to pay $${dailyPayment} per day to clear your debt in ${days} days.`;
+            document.getElementById("payButton").style.display = "block";
+            updateProgress();
+        }
+
+        function updateProgress() {
+            let paidAmount = parseFloat(document.getElementById("paid").value) || 0;
+            let progressPercent = (paidAmount / totalDebt) * 100;
+            progressPercent = Math.min(progressPercent, 100); // Ensure it doesn't exceed 100%
+            
+            let progressBar = document.getElementById("progress");
+            progressBar.style.width = progressPercent + "%";
+            progressBar.innerText = Math.round(progressPercent) + "%";
+        }
+
+        function makePayment() {
+            window.location.href = "payment.html";
+        }
+    </script>
+</body>
+</html>

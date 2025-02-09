@@ -1,0 +1,72 @@
+.jobs-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .job-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .job-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .job-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .job-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .job-details {
+    padding: 15px;
+  }
+  
+  .job-details h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .job-details p {
+    margin: 5px 0;
+    color: #555;
+  }
+  .unskilled-section {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .unskilled-section h2 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .campaign-button {
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%;
+  }
+  
+  .campaign-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,71 @@
+.mission-container {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .dashboard {
+    display: flex;
+    align-items: center;
+    background-color: #e8f5e9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .user-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #4caf50;
+  }
+  
+  .user-details {
+    line-height: 1px;
+  }
+  
+  .mission-info {
+    background-color: #f1f8e9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .share-section {
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .share-section .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .share-section .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .thanks-message {
+    margin-top: 15px;
+    color: #388e3c;
+    font-weight: bold;
+  }
+  

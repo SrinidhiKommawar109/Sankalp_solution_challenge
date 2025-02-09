@@ -1,0 +1,49 @@
+.buy-page {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  }
+  
+  .buy-container {
+    width: 500px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  form {
+    margin-top: 15px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+  }
+  
+  input {
+    padding: 8px;
+    width: 100%;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  

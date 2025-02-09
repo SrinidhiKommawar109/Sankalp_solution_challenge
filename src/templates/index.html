@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industry Recommendation System</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1> Sankalp Swayamprabha</h1>
+    <form id="recommendation-form">
+      <label for="district">Select District:</label>
+      <select id="district" name="district">
+        <option value="" disabled selected>Choose a district</option>
+        
+      </select>
+
+      <label for="scale">Select Scale:</label>
+      <select id="scale" name="scale">
+        <option value="" disabled selected>Choose a scale</option>
+        <option value="Small">Small Scale   (2 to 6 Lakhs)</option>
+        <option value="Medium">Medium Scale  (10 to 50 Lakhs)</option>
+        <option value="Large">Large Scale  (50 Lakhs to 100+ Lakhs)</option>
+      </select>
+
+      <button type="submit">Get Recommendations</button>
+    </form>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Populate districts dynamically
+    const districts = [
+      "Adilabad", "Nizamabad", "Karimnagar", "Medak", "Hyderabad",
+      "Rangareddy", "Warangal", "Khammam", "Mahbubnagar", "Nalgonda",
+      "Sangareddy", "Yadadri Bhuvanagiri", "Vikarabad", "Jagtial", "Kamareddy",
+      "Peddapalli", "Bhadradri Kothagudem", "Siddipet", "Mancherial", "Nirmal",
+      "Mahabubabad", "Jangaon", "Mulugu", "Narayanpet", "Rajanna Sircilla",
+      "Medchal-Malkajgiri", "Jayashankar Bhupalapally", "Wanaparthy",
+      "Jogulamba Gadwal", "Nagarkurnool", "Suryapet", "Asifabad"
+    ];
+    const districtDropdown = document.getElementById('district');
+    districts.forEach(district => {
+      const option = document.createElement('option');
+      option.value = district;
+      option.textContent = district;
+      districtDropdown.appendChild(option);
+    });
+
+    // Handle form submission
+    document.getElementById('recommendation-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const district = document.getElementById('district').value;
+      const scale = document.getElementById('scale').value;
+
+      if (!district || !scale) {
+        alert('Please select both district and scale.');
+        return;
+      }
+
+      // Fetch recommendation from the server
+      const response = await fetch(`/recommend?district=${district}&scale=${scale}`);
+      const data = await response.json();
+      let resultHTML = `<h2>Recommended Investment:</h2><p>${data.recommendations || 'No data available.'}</p>`;
+            if (data.image) {
+                resultHTML += `<img src="data:image/png;base64,${data.image}" alt="Industry Chart">`;
+            }
+
+            document.getElementById('result').innerHTML = resultHTML;
+      document.getElementById('result').innerHTML = `
+        <h2>Recommended Investment:</h2>
+        <p>${data.recommendations || 'No data available.'}</p>
+      `;
+    
+    });
+  </script>
+</body>
+</html>
+

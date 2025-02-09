@@ -1,0 +1,124 @@
+.opportunities-container {
+    padding: 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #006400; /* Dark green to match the theme */
+    font-weight: bold;
+}
+
+.opportunities-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Decreased min-width */
+    gap: 15px; /* Reduced gap between cards */
+    margin: 0 auto;
+    padding: 15;
+}
+
+.opportunity-card {
+    background-color: #fff;
+    padding: 40px; /* Reduced padding */
+    border-radius: 8px; /* Slightly smaller radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    max-width: 280px; /* Reduced card width */
+    margin: 0 auto;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.opportunity-card img {
+    width: 100%;
+    height: 180px; /* Reduced height */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Reduced margin */
+    object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+.opportunity-card h3 {
+    font-size: 1.0rem; /* Reduced font size */
+    margin-bottom: 10px; /* Reduced margin */
+    color: #333;
+    font-weight: 600;
+}
+
+.opportunity-card p {
+    font-size: 1.0rem; /* Slightly smaller text */
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.opportunity-card a {
+    display: inline-block;
+    margin-top: 10px; /* Reduced margin */
+    padding: 8px 10px; /* Reduced padding for the button */
+    background-color: #006400; /* Button background matching the theme */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.opportunity-card a:hover {
+    background-color: #004d00; /* Slightly darker green on hover */
+}
+.reviews {
+    background-color: #f1f8e9;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .review-cards {
+    display: flex;
+    justify-content:    center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .review-card {
+    flex: 1 1 30%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  /* Feedback Form */
+  .feedback-form {
+    background-color: #e8f5e9;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .feedback-form form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .feedback-form input, .feedback-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .feedback-form button {
+    align-self: center;
+  }
+  

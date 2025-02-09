@@ -1,0 +1,95 @@
+.budget-tool {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  h3, h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+    flex-basis: 50%;
+    text-align: left;
+  }
+  
+  input {
+    padding: 8px;
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .expense-section .columns {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .expense-section .column {
+    flex: 1;
+  }
+  
+  .column h3 {
+    text-align: center;
+    color: #555;
+  }
+  .total-row {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .summary {
+    margin-top: 30px;
+    text-align: center;
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .summary p {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  .options {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .debt-alert {
+    color: red;
+    font-weight: bold;
+  }
+  

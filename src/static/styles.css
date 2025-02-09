@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #89cb7b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(233, 106, 106, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color:white;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  select, button {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #2c6331;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #result {
+    margin-top: 20px;
+    text-align:center;
+  }

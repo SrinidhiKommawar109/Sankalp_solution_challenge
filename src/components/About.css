@@ -1,0 +1,40 @@
+/* Common section width and alignment */
+.history-section,
+.faq-section,
+.contact-section,
+.support-section {
+  width: 80%; /* Set the same width for all sections */
+  margin: 30px auto; /* Center the sections horizontally */
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  width: 80%; /* Set the same width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  
+}
+
+.history-images {
+  display: flex; /* Enables flexbox for layout */
+  gap: 15px; /* Spacing between images */
+  justify-content: center; /* Centers images horizontally */
+  align-items: center; /* Centers images vertically if needed */
+}
+
+.history-images img {
+  width: 100%; /* Adjust images to fit within the section */
+  max-width: 350px; /* Maintain original dimensions */
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+

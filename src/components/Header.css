@@ -1,0 +1,121 @@
+/* General Header Styles */
+header {
+    background-color: #006400; /* Green */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: white;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+  }
+  
+  nav a:hover {
+    background-color: #004d00; /* Darker green */
+    border-radius: 5px;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Ensure dropdown appears below the "About" link */
+    left: 0; /* Align dropdown to the left of the parent */
+    background-color: #004d00; /* Dark green */
+    color: white;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    min-width: 200px; /* Ensure proper width */
+  }
+  
+  .dropdown-menu li {
+    padding: 5px 15px;
+  }
+  
+  .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    background-color: #006400; /* Highlight */
+    border-radius: 5px;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block; /* Display dropdown on hover */
+  }
+  
+  .dropdown a {
+    text-align: left;
+  }
+  
+  nav > .dropdown {
+    display: flex;
+    align-items: center;
+  }
+  /* Google Translate Box */
+.translate-box {
+    padding: 2px;
+    border-radius: 3px;   
+}
+select {
+  width: 60px;
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Adjusting the voice search button size */
+.voice-search-button {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.voice-search-button:hover {
+  background-color: #f0f0f0;
+}
+
+.voice-search-button.listening {
+  background-color: #ffcc00; /* Highlight when listening */
+}
+
+/* Adjusting the search input field */
+.voice-search input {
+  width: 5px;
+  padding: 5px;
+  font-size: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 2px;
+}
